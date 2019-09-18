@@ -429,8 +429,8 @@ public class HandPoker extends Hand implements Comparable {
 			HSP.setKickers(FindTheKickers(this.getCRC()));
 			this.setHS(HSP);
 			bisTwoPair = true;
-		return bisTwoPair;
 		}
+		return bisTwoPair;
 	}
 
 	/**
@@ -442,9 +442,7 @@ public class HandPoker extends Hand implements Comparable {
 	 */
 	private boolean isPair() {
 		boolean bisPair = false;
-		if ((GetCRCSize() == eRow.FOUR.ordinal()) && ((GetCRCCount(eRow.ONE.ordinal()) == 2) && (GetCRCCount(eRow.TWO.ordinal()) == 1)
-				&& (GetCRCCount(eRow.THREE.ordinal()) == 1) && (GetCRCCount(eRow.FOUR.ordinal()) == 1))) {
-			bisPair = true;
+		if ((GetCRCSize() == eRowCount.FOUR.getiRowCountItems()) && ((GetCRCCount(eRow.ONE.ordinal()) == 2) {
 			HandScorePoker HSP = (HandScorePoker) this.getHS();
 			HSP.seteHandStrength(eHandStrength.Pair);
 			HSP.setHiCard(this.getCards().get(this.getCRC().get(eRow.ONE.ordinal()).getiCardPosition()));
